@@ -1,9 +1,6 @@
 package com.jizhe7550.navicoexercise.exercise2;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.experimental.theories.Theory;
 
 import static org.junit.Assert.*;
 
@@ -91,30 +88,30 @@ public class ViewTest {
         Chart testChart1 = new Chart(0, 2, 1, 3);
         boolean result1 = View.DoChartsOverlap(chart1, testChart1);
     
-        assertTrue(result1);
+        assertFalse(result1);
     
         Chart chart2 = new Chart(2, 2, 3, 3);
         Chart testChart2 = new Chart(2, 0, 3, 1);
         boolean result2 = View.DoChartsOverlap(chart2, testChart2);
     
-        assertTrue(result2);
+        assertFalse(result2);
     
         Chart chart3 = new Chart(2, 2, 3, 3);
         Chart testChart3 = new Chart(2, 4, 3, 5);
         boolean result3 = View.DoChartsOverlap(chart3, testChart3);
     
-        assertTrue(result3);
+        assertFalse(result3);
     
         Chart chart4 = new Chart(2, 2, 3, 3);
         Chart testChart4 = new Chart(4, 2, 5, 3);
         boolean result4 = View.DoChartsOverlap(chart4, testChart4);
     
-        assertTrue(result4);
+        assertFalse(result4);
     
         Chart chart5 = new Chart(2, 2, 3, 3);
         Chart testChart5 = new Chart(5, 5, 10, 10);
         boolean result5 = View.DoChartsOverlap(chart5, testChart5);
     
-        assertTrue(result5);
+        assertFalse(result5);
     }
 }
